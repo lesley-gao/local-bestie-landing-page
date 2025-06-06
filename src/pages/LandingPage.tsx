@@ -17,7 +17,7 @@ function LandingPage() {
       <GetStarted />
       <Footer />
     </>
-  )
+  );
 }
 
-export default LandingPage
+export default LandingPage;

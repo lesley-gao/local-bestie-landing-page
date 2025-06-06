@@ -1,46 +1,113 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+// All the links below are made up and should be replaced with actual links
+  const socialLinks = [
+    {
+      platform: "Facebook",
+      url: "https://www.facebook.com/local-bestie/",
+      icon: <FaFacebookF />,
+    },
+    {
+      platform: "Instagram",
+      url: "https://www.instagram.com/local-bestie/",
+      icon: <FaInstagram />,
+    },
+    {
+      platform: "LinkedIn",
+      url: "https://www.linkedin.com/local-bestie/",
+      icon: <FaLinkedinIn />,
+    },
+  ];
+
   return (
-    <footer className="bg-white py-8 px-4 border-t">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        {/* Left: Logo + Copyright */}
-        <div className="flex flex-col items-center md:items-start gap-2">
+    <footer className="bg-white py-8 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col sm:hidden items-start gap-6">
+          <div className="flex flex-col items-start gap-2">
+            <Image
+              src="/images/lb-logo.png"
+              alt="Local Bestie Logo"
+              width={156}
+              height={40}
+            />
+            <p className="text-sm text-black font-semibold">
+              © Local Bestie Limited {currentYear}
+            </p>
+          </div>
 
-          <Image
-            src="/images/lb-logo.png"
-            alt="Local Bestie Logo"
-            width={156}
-            height={40}
-          />
+          <div className="flex justify-between w-full">
+            <div className="flex gap-6 text-sm font-semibold text-black">
+              <Link href="#" className="clickeffect transition hover:underline">
+                About
+              </Link>
+              <Link href="#" className="clickeffect transition hover:underline">
+                FAQ
+              </Link>
+              <Link href="#" className="clickeffect transition hover:underline">
+                Terms
+              </Link>
+            </div>
 
-          <p className="text-sm text-black font-semibold">© Local Bestie Limited 2025</p>
+            <div className="flex gap-4 text-themecolor text-lg">
+              {socialLinks.map((link, index) => (
+                <a
+                  key={index}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={link.platform}
+                  className="hover:text-black/80 clickeffect transition"
+                >
+                  {link.icon}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
 
-        {/* Center: Nav Links */}
-        <div className="flex gap-6 text-sm font-semibold text-black">
-          <Link href="#">About</Link>
-          <Link href="#">FAQ</Link>
-          <Link href="#">Terms</Link>
-        </div>
+        <div className="hidden sm:grid sm:grid-cols-3 sm:items-center">
+          <div className="flex flex-col items-start gap-2">
+            <Image
+              src="/images/lb-logo.png"
+              alt="Local Bestie Logo"
+              width={156}
+              height={40}
+            />
+            <p className="text-sm text-black font-semibold">
+              © Local Bestie Limited {currentYear}
+            </p>
+          </div>
 
-        {/* Right: Social Icons */}
-        <div className="flex gap-4 text-themeColor text-lg">
-          <a href="#" target="_blank" aria-label="Facebook">
-            <FaFacebookF />
-          </a>
-          <a href="#" target="_blank" aria-label="Instagram">
-            <FaInstagram />
-          </a>
-          <a href="#" target="_blank" aria-label="LinkedIn">
-            <FaLinkedinIn />
-          </a>
+          <div className="flex gap-6 text-sm font-semibold text-black justify-center">
+            <Link href="#" className="clickeffect transition hover:underline">
+              About
+            </Link>
+            <Link href="#" className="clickeffect transition hover:underline">
+              FAQ
+            </Link>
+            <Link href="#" className="clickeffect transition hover:underline">
+              Terms
+            </Link>
+          </div>
+
+          <div className="flex gap-4 text-themecolor text-lg justify-end">
+            {socialLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.platform}
+                className="hover:text-black/80 clickeffect transition"
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
