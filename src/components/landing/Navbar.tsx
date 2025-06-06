@@ -1,25 +1,24 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <header className="w-full fixed top-0 z-50 bg-white">
-            <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
-
+        <header className="w-full fixed top-0 z-50 bg-white h-20">
+            <nav className="flex mx-auto max-w-7xl items-center justify-between px-4 py-4 md:px-6">
                 {/* Logo */}
                 <Image src="/images/lb-logo.png" alt="Local Bestie logo" width={155} height={40} />
 
                 {/* Desktop Nav */}
-                <div className="hidden md:flex items-center space-x-6">
+                <div className="hidden md:flex items-center space-x-8">
                     <Link href="#" className="text-themecolor font-semibold hover:underline">Log In</Link>
                     <Link
                         href="#"
-                        className="bg-themecolor hover:bg-[#92253C] text-white font-semibold py-2 px-4 rounded"
+                        className="bg-themecolor hover:bg-[#92253C] text-white font-semibold py-2 px-5 rounded"
                     >
                         Join Now
                     </Link>
