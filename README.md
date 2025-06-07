@@ -20,6 +20,14 @@
 ## Introduction of the Webpage
 This is the landing page for **Local Bestie (Merchant)**. It showcases the core features of the platform’s AI-powered tools, designed to help merchants attract and retain local customers.
 
+On the page, under the "Download the App" section, the two store buttons are intended to redirect users to their respective app store platforms:
+
+- Google Play → https://play.google.com/store/lb-partner-app-download
+
+- App Store → https://www.apple.com/nz/app-store/lb-partner-app-download
+
+⚠️ Please note: These links are currently placeholders and will be updated with the actual app store URLs once available.
+
 ## UI Preview
 
 Desktop preview: 

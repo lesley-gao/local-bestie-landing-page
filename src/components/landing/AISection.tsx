@@ -35,6 +35,7 @@ export default function AISection() {
               alt="AI tools"
               fill
               className="object-cover"
+              priority
             />
           </div>
         </div>
