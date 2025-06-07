@@ -24,11 +24,11 @@ This is the landing page for **Local Bestie (Merchant)**. It showcases the core 
 
 Desktop preview: 
 
-<img src="/images/Local-Bestie-desktop.png" alt="desktop preview" />
+<img src="public/images/Local-Bestie-desktop.png" alt="desktop preview" />
 
 Mobile preview:
 
-<img src="./group-image/Local-Bestie-mobile.png" alt="mobile preview"/>
+<img src="public/images/Local-Bestie-mobile.png" alt="mobile preview"/>
 
 ## How To Run
 
@@ -75,4 +75,4 @@ Once the server starts, open your browser and go to:
 http://localhost:3000
 ```
 
-Or, you can watch the demo video ([Click the link](#)) here.
+Or, you can watch the demo video ([Click the link](https://youtu.be/GkCzEjyS0DA)) here.
