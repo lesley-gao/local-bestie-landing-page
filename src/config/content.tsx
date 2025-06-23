@@ -20,7 +20,7 @@ export const customerNavbarConfig: NavbarConfig = {
   },
   ctaButton: {
     text: "Start Discovering - It's free!",
-    href: "#",
+    href: "#download",
   },
 };
 
@@ -37,7 +37,7 @@ export const businessNavbarConfig: NavbarConfig = {
   },
   ctaButton: {
     text: "Start Growing - It's free!",
-    href: "#",
+    href: "#download",
   },
 };
 
