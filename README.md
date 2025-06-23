@@ -18,25 +18,15 @@
 - Tailwind CSS
 
 ## Introduction of the Webpage
-This is the landing page for **Local Bestie (Merchant)**. It showcases the core features of the platform’s AI-powered tools, designed to help merchants attract and retain local customers.
 
-On the page, under the "Download the App" section, the two store buttons are intended to redirect users to their respective app store platforms:
+This webpage presents Local Bestie, a dual-sided platform with separate landing pages for businesses (offering AI-powered marketing tools and revenue growth solutions) and customers (featuring personalised local discovery and cashback rewards), designed with reusable components for optimal user experience.
 
-- Google Play → https://play.google.com/store/lb-partner-app-download
-
-- App Store → https://www.apple.com/nz/app-store/lb-partner-app-download
-
+On the page, under the "Download the App" section, the two store buttons are intended to redirect users to their respective app store platforms.
 ⚠️ Please note: These links are currently placeholders and will be updated with the actual app store URLs once available.
 
 ## UI Preview
 
-Desktop preview: 
-
-<img src="public/images/Local-Bestie-desktop.png" alt="desktop preview" />
-
-Mobile preview:
-
-<img src="public/images/Local-Bestie-mobile.png" alt="mobile preview"/>
+Please check the video here: [https://youtu.be/hy0yQ98p2o0](https://youtu.be/hy0yQ98p2o0)
 
 ## How To Run
 
@@ -56,12 +46,12 @@ Before running the project, make sure you have the following installed:
 
 - Run the following command in the terminal:
 ```
-git clone https://github.com/lesley-gao/local-bestie-merchant-landing.git
+git clone https://github.com/lesley-gao/local-bestie-landing-page.git
 ```
 
 **2. Navigate into the project directory**
 ```
-cd local-bestie-merchant-landing
+cd local-bestie-landing-page
 ```
 
 **3. Install dependencies**
@@ -82,5 +72,3 @@ Once the server starts, open your browser and go to:
 ```
 http://localhost:3000
 ```
-
-Or, you can watch the demo video ([Click the link](https://youtu.be/GkCzEjyS0DA)) here.
