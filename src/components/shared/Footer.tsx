@@ -4,7 +4,8 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-// All the links below are made up and should be replaced with actual links
+  
+// TODO: All the links below are made up and should be replaced with actual links
   const socialLinks = [
     {
       platform: "Facebook",
@@ -45,10 +46,10 @@ export default function Footer() {
                 About
               </Link>
               <Link href="#" className="clickeffect transition hover:underline">
-                FAQ
+          Terms
               </Link>
               <Link href="#" className="clickeffect transition hover:underline">
-                Terms
+         Contact Us
               </Link>
             </div>
 
@@ -83,14 +84,14 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-6 text-sm font-semibold text-black justify-center">
-            <Link href="#" className="clickeffect transition hover:underline">
+            <Link href="#" className="clickeffect transition hover:underline underline-offset-2">
               About
             </Link>
-            <Link href="#" className="clickeffect transition hover:underline">
-              FAQ
-            </Link>
-            <Link href="#" className="clickeffect transition hover:underline">
+            <Link href="#" className="clickeffect transition hover:underline  underline-offset-2">
               Terms
+            </Link>
+            <Link href="#" className="clickeffect transition hover:underline  underline-offset-2">
+              Contact Us
             </Link>
           </div>
 

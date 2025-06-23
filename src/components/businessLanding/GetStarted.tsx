@@ -16,7 +16,7 @@ export default function GetStarted() {
             Start free. Pay only when you win.
           </p>
           <a
-            href="#"
+            href="#download"
             className="inline-block border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-themecolor clickeffect transition"
           >
             Become a Local Bestie Partner

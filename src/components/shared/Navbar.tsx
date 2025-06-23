@@ -3,34 +3,56 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Navbar() {
+export type NavbarConfig = {
+  logo: {
+    src: string;
+    alt: string;
+    homeUrl: string;
+  };
+  switchButton: {
+    text: string;
+    href: string;
+  };
+  ctaButton: {
+    text: string;
+    href: string;
+  };
+};
+
+type NavbarProps = {
+  config: NavbarConfig;
+};
+
+export default function Navbar({ config }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="w-full fixed top-0 z-50 bg-white h-20 shadow-sm">
       <nav className="flex mx-auto max-w-7xl items-center justify-between px-4 py-4 md:px-8 h-full">
         <div className="flex items-center">
-          <Image
-            src="/images/lb-logo.png"
-            alt="Local Bestie logo"
-            width={155}
-            height={40}
-            className="object-contain"
-          />
+          <Link href={config.logo.homeUrl}>
+            <Image
+              src={config.logo.src}
+              alt={config.logo.alt}
+              width={155}
+              height={40}
+              className="object-contain cursor-pointer"
+            />
+          </Link>
         </div>
 
         <div className="hidden md:flex items-center space-x-8">
           <Link
-            href="#"
-            className="text-themecolor font-semibold hover:underline clickeffect"
+            href={config.switchButton.href}
+            className="text-themecolor font-semibold hover:underline underline-offset-2 clickeffect"
           >
-            Log In
+            {config.switchButton.text}
           </Link>
           <Link
-            href="#"
+            href={config.ctaButton.href}
             className="bg-themecolor hover:bg-[#92253C] text-white font-semibold py-2 px-6 rounded clickeffect transition"
           >
-            Join Now
+            {config.ctaButton.text}
           </Link>
         </div>
 
@@ -59,18 +81,18 @@ export default function Navbar() {
         <div className="md:hidden px-4 pb-4 bg-white border-t border-gray-100 animate-in slide-in-from-top duration-200">
           <div className="space-y-3 pt-3">
             <Link
-              href="#"
+              href={config.switchButton.href}
               className="block text-themecolor font-semibold py-2 text-center clickeffect transition"
               onClick={() => setIsMenuOpen(false)}
             >
-              Log In
+              {config.switchButton.text}
             </Link>
             <Link
-              href="#"
+              href={config.ctaButton.href}
               className="block bg-themecolor text-white font-semibold py-3 px-4 rounded text-center clickeffect hover:bg-[#92253C] transition"
               onClick={() => setIsMenuOpen(false)}
             >
-              Join Now
+              {config.ctaButton.text}
             </Link>
           </div>
         </div>

@@ -1,7 +1,6 @@
-import LandingPage from "@/pages/LandingPage";
+
+import BusinessLanding from "@/pages/BusinessLanding";
 
 export default function Home() {
-  return (
-    <LandingPage />
-  );
+  return <BusinessLanding />;
 }
