@@ -14,10 +14,13 @@ import {
   customerDownloadConfig,
   customerFAQConfig,
 } from "@/config/content";
+import { CustomerPageHead } from "@/components/SEO";
 
 export default function CustomerLanding() {
   return (
     <>
+      <CustomerPageHead />
+
       <Navbar config={customerNavbarConfig} />
       <HeroSection content={customerHeroContent} />
       <FeaturesSection

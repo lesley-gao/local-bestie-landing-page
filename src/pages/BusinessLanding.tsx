@@ -16,10 +16,13 @@ import {
   businessDownloadConfig,
   businessFAQConfig,
 } from "../config/content";
+import { BusinessPageHead } from "@/components/SEO";
 
 export default function BusinessLanding() {
   return (
     <>
+      <BusinessPageHead />
+
       <Navbar config={businessNavbarConfig} />
       <HeroSection content={businessHeroContent} />
       <FeaturesSection

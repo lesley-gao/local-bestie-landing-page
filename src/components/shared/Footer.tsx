@@ -4,22 +4,22 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  
-// TODO: All the links below are made up and should be replaced with actual links
+
+  // TODO: All the links below are made up and should be replaced with actual links
   const socialLinks = [
     {
       platform: "Facebook",
-      url: "https://www.facebook.com/local-bestie/",
+      url: "#",
       icon: <FaFacebookF />,
     },
     {
       platform: "Instagram",
-      url: "https://www.instagram.com/local-bestie/",
+      url: "#",
       icon: <FaInstagram />,
     },
     {
       platform: "LinkedIn",
-      url: "https://www.linkedin.com/local-bestie/",
+      url: "#",
       icon: <FaLinkedinIn />,
     },
   ];
@@ -46,10 +46,10 @@ export default function Footer() {
                 About
               </Link>
               <Link href="#" className="clickeffect transition hover:underline">
-          Terms
+                Terms
               </Link>
               <Link href="#" className="clickeffect transition hover:underline">
-         Contact Us
+                Contact Us
               </Link>
             </div>
 
@@ -84,13 +84,22 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-6 text-sm font-semibold text-black justify-center">
-            <Link href="#" className="clickeffect transition hover:underline underline-offset-2">
+            <Link
+              href="#"
+              className="clickeffect transition hover:underline underline-offset-2"
+            >
               About
             </Link>
-            <Link href="#" className="clickeffect transition hover:underline  underline-offset-2">
+            <Link
+              href="#"
+              className="clickeffect transition hover:underline  underline-offset-2"
+            >
               Terms
             </Link>
-            <Link href="#" className="clickeffect transition hover:underline  underline-offset-2">
+            <Link
+              href="#"
+              className="clickeffect transition hover:underline  underline-offset-2"
+            >
               Contact Us
             </Link>
           </div>
