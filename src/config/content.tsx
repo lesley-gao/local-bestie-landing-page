@@ -210,13 +210,13 @@ export const customerDownloadConfig: DownloadConfig = {
   links: [
     {
       platform: "Google Play",
-      url: "https://play.google.com/store/lb-customer-app-download",
+      url: "/comingsoon",
       image: "/images/google-play-download.png",
       alt: "Get it on Google Play",
     },
     {
       platform: "App Store",
-      url: "https://www.apple.com/nz/app-store/lb-customer-app-download",
+      url: "/comingsoon",
       image: "/images/app-store-download.png",
       alt: "Download on the App Store",
     },
@@ -230,13 +230,13 @@ export const businessDownloadConfig: DownloadConfig = {
   links: [
     {
       platform: "Google Play",
-      url: "https://play.google.com/store/lb-partner-app-download",
+      url: "/comingsoon",
       image: "/images/google-play-download.png",
       alt: "Get it on Google Play",
     },
     {
       platform: "App Store",
-      url: "https://www.apple.com/nz/app-store/lb-partner-app-download",
+      url: "/comingsoon",
       image: "/images/app-store-download.png",
       alt: "Download on the App Store",
     },

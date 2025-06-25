@@ -37,7 +37,7 @@ const handleJoinClick = (e: React.MouseEvent) => {
 
 export default function HeroSection({ content }: HeroSectionProps) {
   return (
-    <section className="bg-themecolor text-white py-16 sm:py-24 px-4 sm:px-8 lg:px-24">
+    <section className="bg-themecolor text-white mt-20 py-16 sm:py-24 px-4 sm:px-8 lg:px-24 ">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between">
         <div className="w-full sm:w-3/5 text-left space-y-6">
           <h1

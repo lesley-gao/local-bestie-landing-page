@@ -15,7 +15,7 @@ import {
   customerFAQConfig,
 } from "@/config/content";
 
-function CustomerLanding() {
+export default function CustomerLanding() {
   return (
     <>
       <Navbar config={customerNavbarConfig} />
@@ -36,5 +36,3 @@ function CustomerLanding() {
     </>
   );
 }
-
-export default CustomerLanding;
