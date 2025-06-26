@@ -230,13 +230,13 @@ export const businessDownloadConfig: DownloadConfig = {
   links: [
     {
       platform: "Google Play",
-      url: "/comingsoon",
+      url: "https://play.google.com/store/apps/details?id=com.localbestie.merchant",
       image: "/images/google-play-download.png",
       alt: "Get it on Google Play",
     },
     {
       platform: "App Store",
-      url: "/comingsoon",
+      url: "https://apps.apple.com/nz/app/lb-partners/id6744010047",
       image: "/images/app-store-download.png",
       alt: "Download on the App Store",
     },

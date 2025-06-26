@@ -18,7 +18,7 @@ export default function ComingSoon() {
     },
     {
       platform: "LinkedIn",
-      url: "#",
+      url: "https://www.linkedin.com/company/local-bestie/",
       icon: <FaLinkedinIn />,
     },
   ];
