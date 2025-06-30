@@ -2,7 +2,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import ContactSalesModal, { ContactSalesConfig } from "./ContactSalesModal";
+//import ContactSalesModal, { ContactSalesConfig } from "./ContactSalesModal";
+import DownloadAppModal, { DownloadAppConfig } from "./DownloadAppModal";
 
 export type NavbarConfig = {
   logo: {
@@ -19,7 +20,7 @@ export type NavbarConfig = {
     href: string;
     useModal?: boolean;
   };
-  modalConfig?: ContactSalesConfig; 
+  modalConfig?: DownloadAppConfig;
 };
 
 type NavbarProps = {
@@ -136,8 +137,16 @@ export default function Navbar({ config }: NavbarProps) {
       </header>
 
       {/* Contact Sales Modal */}
-      {config.modalConfig && (
+      {/* {config.modalConfig && (
         <ContactSalesModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          config={config.modalConfig}
+        />
+      )} */}
+      {/* Download App Modal */}
+      {config.modalConfig && (
+        <DownloadAppModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
           config={config.modalConfig}

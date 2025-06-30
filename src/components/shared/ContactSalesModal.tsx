@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
 export type ContactSalesConfig = {
@@ -26,6 +26,8 @@ export default function ContactSalesModal({
   onClose,
   config,
 }: ContactSalesModalProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  
   const {
     title,
     subtitle,
@@ -36,25 +38,31 @@ export default function ContactSalesModal({
     image,
   } = config;
 
+  const handleClose = useCallback(() => {
+    setIsVisible(false);
+    setTimeout(onClose, 300);
+  }, [onClose]);
+
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
-        onClose();
+        handleClose();
       }
     };
 
     if (isOpen) {
+      setIsVisible(true);
       document.addEventListener("keydown", handleEsc);
       document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
     }
 
     return () => {
       document.removeEventListener("keydown", handleEsc);
       document.body.style.overflow = "unset";
     };
-  }, [isOpen, onClose]);
-
-  if (!isOpen) return null;
+  }, [isOpen, handleClose]);
 
   const handleEmailClick = () => {
     window.location.href = `mailto:${email}`;
@@ -62,18 +70,22 @@ export default function ContactSalesModal({
 
   const handleBackdropClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
-      onClose();
+      handleClose();
     }
   };
 
+  if (!isOpen) return null;
+
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center transition-all duration-300 p-4"
       style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
       onClick={handleBackdropClick}
     >
       <div
-        className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-auto border border-gray-400"
+        className={`bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-auto border border-gray-400 transition-all duration-300 ${
+          isVisible ? "scale-100 opacity-100" : "scale-95 opacity-0"
+        }`}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex flex-col md:flex-row">
@@ -88,7 +100,7 @@ export default function ContactSalesModal({
                 {subtitle && <p className="text-gray-600">{subtitle}</p>}
               </div>
               <button
-                onClick={onClose}
+                onClick={handleClose}
                 className="text-gray-400 hover:text-gray-600 transition-colors ml-4 flex-shrink-0"
                 aria-label="Close modal"
               >
@@ -135,7 +147,7 @@ export default function ContactSalesModal({
                 {buttonText}
               </button>
               <button
-                onClick={onClose}
+                onClick={handleClose}
                 className="flex-1 bg-gray-100 text-gray-700 px-6 py-3 rounded-md font-semibold hover:bg-gray-200 clickeffect transition"
               >
                 {closeButtonText}
@@ -154,7 +166,7 @@ export default function ContactSalesModal({
                   sizes="(max-width: 768px) 100vw, 320px"
                   className="object-cover"
                 />
-                  <div className="absolute inset-0 bg-black/30"></div>
+                <div className="absolute inset-0 bg-black/30"></div>
               </div>
             ) : (
               <div className="flex items-center justify-center w-full h-64 md:h-full min-h-[300px] text-gray-400">
@@ -168,7 +180,7 @@ export default function ContactSalesModal({
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={1}
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 002 2z"
                   />
                 </svg>
               </div>

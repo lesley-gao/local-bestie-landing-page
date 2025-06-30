@@ -40,19 +40,37 @@ export const businessNavbarConfig: NavbarConfig = {
     href: "#download",
     useModal: true,
   },
+  // modalConfig: {
+  //   title: "Ready to Grow Your Business?",
+  //   subtitle:
+  //     "See how Local Bestie brings in more customers",
+  //   description:
+  //     "Our sales team is here to help you get started. Email us and we'll respond within 24 hours to explore how Local Bestie can boost your revenue.",
+  //   email: "sales@localbestie.com",
+  //   buttonText: "Send Email",
+  //   closeButtonText: "Maybe Later",
+  //   image: {
+  //     src: "/images/feature-img.jpg",
+  //     alt: "Contact our sales team"
+  //   }
+  // },
   modalConfig: {
-    title: "Ready to Grow Your Business?",
-    subtitle:
-      "See how Local Bestie brings in more customers",
-    description:
-      "Our sales team is here to help you get started. Email us and we'll respond within 24 hours to explore how Local Bestie can boost your revenue.",
-    email: "sales@localbestie.com",
-    buttonText: "Send Email",
-    closeButtonText: "Maybe Later",
+    title: "Get Local Bestie on your phone",
+    subtitle: "Manage your restaurant and track performance on the go",
     image: {
-      src: "/images/feature-img.jpg",  
-      alt: "Contact our sales team"
-    }
+      src: "/images/MerchantApp.png",
+      alt: "Local Bestie Merchant App",
+    },
+    downloadLinks: {
+      appStore: "https://apps.apple.com/nz/app/lb-partners/id6744010047",
+      googlePlay:
+        "https://play.google.com/store/apps/details?id=com.localbestie.merchant",
+    },
+    qrCodes: {
+      appStore: "/images/appstore-qrcode.png",
+      googlePlay: "/images/googleplay-qrcode.png",
+    },
+    // closeButtonText: "Maybe Later"
   },
 };
 
