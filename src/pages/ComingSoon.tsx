@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { ComingSoonPageHead } from "@/components/SEO";
 
 export default function ComingSoon() {
   // TODO: All the links below are made up and should be replaced with actual links
@@ -25,8 +24,6 @@ export default function ComingSoon() {
 
   return (
     <>
-      <ComingSoonPageHead />
-
       <div className="h-screen flex flex-col">
         <div
           className="absolute top-1/2 left-1/2 z-50"

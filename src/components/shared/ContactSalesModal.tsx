@@ -27,7 +27,7 @@ export default function ContactSalesModal({
   config,
 }: ContactSalesModalProps) {
   const [isVisible, setIsVisible] = useState(false);
-  
+
   const {
     title,
     subtitle,

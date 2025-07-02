@@ -17,11 +17,17 @@ export default function FeaturesSection({
   title,
   subtitle,
   features,
-  variant = "business"
+  variant = "business",
 }: FeaturesSectionProps) {
   return (
     <section className="py-20 sm:py-24 px-6 text-center md:px-8 lg:px-24">
-<h2 className={`text-4xl sm:text-3xl font-bold ${subtitle ? "mb-4" : "mb-10"}`}>{title}</h2>
+      <h2
+        className={`text-4xl sm:text-3xl font-bold ${
+          subtitle ? "mb-4" : "mb-10"
+        }`}
+      >
+        {title}
+      </h2>
       {subtitle && (
         <p className="text-themecolor text-xl sm:text-lg font-semibold mb-10">
           {subtitle}

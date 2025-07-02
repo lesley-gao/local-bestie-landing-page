@@ -24,100 +24,76 @@ export default function Footer() {
     },
   ];
 
+  const navigationLinks = [
+    { label: "About", href: "#" },
+    { label: "Terms", href: "#" },
+    { label: "Privacy", href: "/privacypolicy" },
+    // { label: "Contact Us", href: "#" },
+  ];
+
+  // Reusable components
+  const LogoSection = () => (
+    <div className="flex flex-col items-start gap-2">
+      <Image
+        src="/images/lb-logo.png"
+        alt="Local Bestie Logo"
+        width={156}
+        height={40}
+      />
+      <p className="text-sm text-black font-semibold">
+        © Local Bestie Limited {currentYear}
+      </p>
+    </div>
+  );
+
+  const NavigationLinks = ({ className = "" }: { className?: string }) => (
+    <div className={`flex gap-6 text-sm font-semibold text-black ${className}`}>
+      {navigationLinks.map((link) => (
+        <Link
+          key={link.label}
+          href={link.href}
+          className="clickeffect transition hover:underline underline-offset-2"
+        >
+          {link.label}
+        </Link>
+      ))}
+    </div>
+  );
+
+  const SocialLinks = ({ className = "" }: { className?: string }) => (
+    <div className={`flex gap-4 text-themecolor text-lg ${className}`}>
+      {socialLinks.map((link, index) => (
+        <a
+          key={index}
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={link.platform}
+          className="hover:text-black/80 clickeffect transition"
+        >
+          {link.icon}
+        </a>
+      ))}
+    </div>
+  );
+
   return (
     <footer className="bg-white py-8 px-4">
       <div className="max-w-7xl mx-auto">
+        {/* Mobile Layout */}
         <div className="flex flex-col sm:hidden items-start gap-6">
-          <div className="flex flex-col items-start gap-2">
-            <Image
-              src="/images/lb-logo.png"
-              alt="Local Bestie Logo"
-              width={156}
-              height={40}
-            />
-            <p className="text-sm text-black font-semibold">
-              © Local Bestie Limited {currentYear}
-            </p>
-          </div>
-
+          <LogoSection />
           <div className="flex justify-between w-full">
-            <div className="flex gap-6 text-sm font-semibold text-black">
-              <Link href="#" className="clickeffect transition hover:underline">
-                About
-              </Link>
-              <Link href="#" className="clickeffect transition hover:underline">
-                Terms
-              </Link>
-              <Link href="#" className="clickeffect transition hover:underline">
-                Contact Us
-              </Link>
-            </div>
-
-            <div className="flex gap-4 text-themecolor text-lg">
-              {socialLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={link.platform}
-                  className="hover:text-black/80 clickeffect transition"
-                >
-                  {link.icon}
-                </a>
-              ))}
-            </div>
+            <NavigationLinks />
+            <SocialLinks />
           </div>
         </div>
 
+        {/* Desktop Layout */}
         <div className="hidden sm:grid sm:grid-cols-3 sm:items-center">
-          <div className="flex flex-col items-start gap-2">
-            <Image
-              src="/images/lb-logo.png"
-              alt="Local Bestie Logo"
-              width={156}
-              height={40}
-            />
-            <p className="text-sm text-black font-semibold">
-              © Local Bestie Limited {currentYear}
-            </p>
-          </div>
-
-          <div className="flex gap-6 text-sm font-semibold text-black justify-center">
-            <Link
-              href="#"
-              className="clickeffect transition hover:underline underline-offset-2"
-            >
-              About
-            </Link>
-            <Link
-              href="#"
-              className="clickeffect transition hover:underline  underline-offset-2"
-            >
-              Terms
-            </Link>
-            <Link
-              href="#"
-              className="clickeffect transition hover:underline  underline-offset-2"
-            >
-              Contact Us
-            </Link>
-          </div>
-
-          <div className="flex gap-4 text-themecolor text-lg justify-end">
-            {socialLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={link.platform}
-                className="hover:text-black/80 clickeffect transition"
-              >
-                {link.icon}
-              </a>
-            ))}
-          </div>
+          <LogoSection />
+          <NavigationLinks className="justify-center" />
+          <SocialLinks className="justify-end" />
         </div>
       </div>
     </footer>

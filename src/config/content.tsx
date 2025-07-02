@@ -20,7 +20,7 @@ export const customerNavbarConfig: NavbarConfig = {
   },
   ctaButton: {
     text: "Start Discovering - It's free!",
-    href: "#download",
+    href: "/comingsoon",
   },
 };
 
@@ -70,7 +70,6 @@ export const businessNavbarConfig: NavbarConfig = {
       appStore: "/images/appstore-qrcode.png",
       googlePlay: "/images/googleplay-qrcode.png",
     },
-    // closeButtonText: "Maybe Later"
   },
 };
 
@@ -354,6 +353,6 @@ export const customerFAQConfig: FAQConfig = {
         "You'll find restaurants, cafes, bars, retail stores, and various service providers - all locally-owned businesses that make your neighborhood special.",
     },
   ],
-  maxDisplayCount: 4,
+  maxDisplayCount: 5,
   showAllButtonText: "Show all FAQs",
 };

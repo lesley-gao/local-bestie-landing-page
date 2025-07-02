@@ -12,7 +12,7 @@ export type FAQConfig = {
   contactEmail?: string;
   faqs: FAQItem[];
   showAllButtonText?: string;
-  maxDisplayCount?: number; 
+  maxDisplayCount?: number;
 };
 
 type FAQSectionProps = {
@@ -22,14 +22,14 @@ type FAQSectionProps = {
 export default function FAQSection({ config }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
-  
+
   const {
     title,
     subtitle,
     contactEmail,
     faqs,
-    showAllButtonText = "Show all FAQs",
-    maxDisplayCount = 5
+    showAllButtonText,
+    maxDisplayCount = 5,
   } = config;
 
   const displayedFAQs = showAll ? faqs : faqs.slice(0, maxDisplayCount);
@@ -53,7 +53,7 @@ export default function FAQSection({ config }: FAQSectionProps) {
               {contactEmail && (
                 <>
                   {" "}
-                  <a 
+                  <a
                     href={`mailto:${contactEmail}`}
                     className="text-themecolor hover:underline font-medium"
                   >
@@ -84,7 +84,7 @@ export default function FAQSection({ config }: FAQSectionProps) {
                   {openIndex === index ? "−" : "+"}
                 </span>
               </button>
-              
+
               {openIndex === index && (
                 <div className="px-6 pb-4 border-t border-gray-100">
                   <div className="pt-4 text-gray-700 leading-relaxed">
