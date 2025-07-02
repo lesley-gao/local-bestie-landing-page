@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { IoLocationSharp } from "react-icons/io5";
 
 interface MerchantCard {
   id: string;
@@ -9,6 +10,7 @@ interface MerchantCard {
   rating: number;
   cashback: string;
   image: string;
+  area: string;
   url: string;
 }
 
@@ -20,58 +22,64 @@ const merchantsData: MerchantCard[] = [
     location: "Auckland Top 10 Resta...",
     rating: 5.0,
     cashback: "23% Cashback",
-    image: "/images/feature-img.jpg",
+    image: "/images/local-bestie-cafe.png",
+    area: "CBD",
     url: "/merchant/local-bestie-cafe",
   },
   {
     id: "2",
-    name: "Totally Chicken",
-    category: "Cafe • Spicy",
-    location: "Auckland Top 10 Resta...",
-    rating: 5.0,
-    cashback: "30% Cashback",
-    image: "/images/cashback-loyalty.jpg",
-    url: "/merchant/totally-chicken",
+    name: "Sunrise Espresso",
+    category: "Cafe",
+    location: "Ponsonby, Auckland",
+    rating: 4.7,
+    cashback: "15% Cashback",
+    image: "/images/sunrise-espresso.png",
+    area: "CBD",
+    url: "/merchant/sunrise-espresso",
   },
   {
     id: "3",
-    name: "Shanghai Restaurant",
-    category: "Cafe • Spicy",
-    location: "Auckland Top 10 Resta...",
-    rating: 5.0,
-    cashback: "30% Cashback",
-    image: "/images/dynamic-offers.jpg",
-    url: "/merchant/shanghai-restaurant",
+    name: "The Green Fork",
+    category: "Vegan Restaurant",
+    location: "Mt Eden, Auckland",
+    rating: 4.8,
+    cashback: "20% Cashback",
+    image: "/images/green-fork.png",
+    area: "CBD",
+    url: "/merchant/the-green-fork",
   },
   {
     id: "4",
-    name: "Hot Duke Hotpot",
-    category: "Cafe • Spicy",
-    location: "Auckland Top 10 Resta...",
-    rating: 5.0,
-    cashback: "15% Cashback",
-    image: "/images/smart-visibility.jpg",
-    url: "/merchant/hot-duke-hotpot",
+    name: "Bamboo House",
+    category: "Asian Fusion",
+    location: "Newmarket, Auckland",
+    rating: 4.9,
+    cashback: "18% Cashback",
+    image: "/images/bamboo-house.png",
+    area: "CBD",
+    url: "/merchant/bamboo-house",
   },
   {
     id: "5",
-    name: "Totally Chicken",
-    category: "Cafe • Spicy",
-    location: "Auckland Top 10 Resta...",
-    rating: 5.0,
-    cashback: "30% Cashback",
-    image: "/images/business-hero-img.jpg",
-    url: "/merchant/totally-chicken-2",
+    name: "Ocean Grill",
+    category: "Seafood Restaurant",
+    location: "Mission Bay, Auckland",
+    rating: 4.6,
+    cashback: "25% Cashback",
+    image: "/images/ocean-grill.png",
+    area: "CBD",
+    url: "/merchant/ocean-grill",
   },
   {
     id: "6",
-    name: "Shanghai Restaurant",
-    category: "Cafe • Spicy",
-    location: "Auckland Top 10 Resta...",
-    rating: 5.0,
-    cashback: "30% Cashback",
-    image: "/images/feature-img.jpg",
-    url: "/merchant/shanghai-restaurant-2",
+    name: "Daily Grind",
+    category: "Cafe",
+    location: "Britomart, Auckland",
+    rating: 4.5,
+    cashback: "10% Cashback",
+    image: "/images/daily-grind.png",
+    area: "CBD",
+    url: "/merchant/daily-grind",
   },
 ];
 
@@ -81,26 +89,29 @@ export default function MerchantsSection() {
       <div className="max-w-7xl mx-auto px-8 ">
         {/* Header */}
         <div className="text-center mb-6">
-          <h2 className="text-4xl font-bold text-black mb-8">
+          <h2 className="text-3xl font-bold text-black mb-8">
             Who's on Local Bestie?
           </h2>
-          <div className="flex justify-between items-center">
-            <p className="font-bold text-lg">
+          <div className="flex justify-between items-center max-sm:flex-col max-sm:items-start">
+            <p className="font-bold text-lg max-sm:text-base max-sm:mb-4 max-sm:text-left">
               See the local favourites already on board
             </p>
-            <button className="bg-themecolor hover:bg-[#92253C] text-white font-semibold px-8 py-3 rounded-lg transition-colors clickeffect">
+            <Link
+              href="/customer/allmerchants"
+              className="bg-themecolor hover:bg-[#92253C] text-white font-semibold px-8 py-3 rounded-lg transition-colors clickeffect max-sm:w-full inline-block text-center"
+            >
               Explore More
-            </button>
+            </Link>
           </div>
         </div>
 
         {/* Merchants Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {merchantsData.map((merchant) => (
             <Link
               key={merchant.id}
               href={merchant.url}
-              className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow clickeffect overflow-hidden block"
+              className="bg-white rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out overflow-hidden block"
             >
               {/* Image */}
               <div className="relative h-48 w-full">
@@ -141,7 +152,10 @@ export default function MerchantsSection() {
                       </svg>
                     ))}
                   </div>
-                  <span className="text-sm text-blue-600 ml-auto">📍 CBD</span>
+                  <span className="text-sm ml-auto flex items-center gap-1">
+                    <IoLocationSharp className="text-themecolor" />
+                    {merchant.area}
+                  </span>
                 </div>
               </div>
             </Link>
