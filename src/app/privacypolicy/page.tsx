@@ -37,7 +37,7 @@ export default function PrivacyPage() {
   const getH2BgClass = (sectionId: string) => {
     return activeSection === sectionId
       ? "bg-[#CC1543] text-white"
-      : "bg-gray-100 text-black";
+      : "bg-gray-100";
   };
 
   return (
@@ -61,7 +61,7 @@ export default function PrivacyPage() {
       <div className="max-w-7xl mx-auto px-8 py-8">
         {/* Title Section */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-black mb-2">Privacy Policy</h1>
+          <h1 className="text-3xl font-bold mb-2">Privacy Policy</h1>
           <p className="text-gray-600">Last Updated: July 2, 2025</p>
         </div>
 
@@ -72,7 +72,7 @@ export default function PrivacyPage() {
           {/* Table of Contents */}
           <div className="lg:col-span-1">
             <div className="sticky top-8 p-4">
-              <h3 className="text-xl font-semibold text-black mb-4">
+              <h3 className="text-xl font-semibold  mb-4">
                 Table of Contents
               </h3>
               <ul className="space-y-3">

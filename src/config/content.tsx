@@ -4,6 +4,7 @@ import { FeatureItem } from "../components/shared/FeaturesSection";
 import { StepItem } from "../components/shared/HowItWorksSection";
 import { DownloadConfig } from "../components/shared/DownloadSection";
 import { FAQConfig } from "../components/shared/FAQSection";
+import { DownloadAppConfig } from "../components/shared/DownloadAppModal";
 
 //TODO: All the links below are made up and should be replaced with actual links
 
@@ -355,4 +356,22 @@ export const customerFAQConfig: FAQConfig = {
   ],
   maxDisplayCount: 5,
   showAllButtonText: "Show all FAQs",
+};
+
+// Merchant Details Modal
+export const merchantDetailsModalConfig: DownloadAppConfig = {
+  title: "Get Local Bestie on your phone",
+  subtitle: "Discover local restaurants and earn cashback on every order",
+  image: {
+    src: "/images/CustomerApp.png",
+    alt: "Local Bestie Customer App",
+  },
+  downloadLinks: {
+    appStore: "/comingsoon",
+    googlePlay: "/comingsoon",
+  },
+  qrCodes: {
+    appStore: "/images/coming.png",
+    googlePlay: "/images/coming.png",
+  },
 };

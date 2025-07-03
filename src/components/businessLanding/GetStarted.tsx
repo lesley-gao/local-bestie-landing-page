@@ -28,7 +28,7 @@ export default function GetStarted() {
           {benefits.map((item, index) => (
             <div key={index} className="flex flex-col items-start gap-3">
               <BiCheckCircle className="text-3xl text-themecolor flex-shrink-0" />
-              <p className="text-black font-semibold">{item}</p>
+              <p className="font-semibold text-black">{item}</p>
             </div>
           ))}
         </div>
@@ -43,7 +43,7 @@ export default function GetStarted() {
               className="flex flex-col items-start gap-3 mb-4 last:mb-0"
             >
               <BiCheckCircle className="text-3xl text-themecolor flex-shrink-0" />
-              <p className="text-black font-semibold">{item}</p>
+              <p className="font-semibold text-black">{item}</p>
             </div>
           ))}
         </div>

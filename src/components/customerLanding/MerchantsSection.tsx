@@ -89,7 +89,7 @@ export default function MerchantsSection() {
       <div className="max-w-7xl mx-auto px-8 ">
         {/* Header */}
         <div className="text-center mb-6">
-          <h2 className="text-3xl font-bold text-black mb-8">
+          <h2 className="text-3xl font-bold mb-8">
             Who's on Local Bestie?
           </h2>
           <div className="flex justify-between items-center max-sm:flex-col max-sm:items-start">
@@ -129,7 +129,7 @@ export default function MerchantsSection() {
 
               {/* Content */}
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-black mb-1">
+                <h3 className="text-lg font-semibold mb-1">
                   {merchant.name}
                 </h3>
                 <p className="text-gray-600 text-sm mb-2">
@@ -138,7 +138,7 @@ export default function MerchantsSection() {
 
                 {/* Rating */}
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-medium text-black">
+                  <span className="text-sm font-medium">
                     {merchant.rating.toFixed(1)}
                   </span>
                   <div className="flex text-yellow-400">

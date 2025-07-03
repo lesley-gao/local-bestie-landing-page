@@ -40,14 +40,14 @@ export default function Footer() {
         width={156}
         height={40}
       />
-      <p className="text-sm text-black font-semibold">
+      <p className="text-sm font-semibold">
         © Local Bestie Limited {currentYear}
       </p>
     </div>
   );
 
   const NavigationLinks = ({ className = "" }: { className?: string }) => (
-    <div className={`flex gap-6 text-sm font-semibold text-black ${className}`}>
+    <div className={`flex gap-6 text-sm font-semibold ${className}`}>
       {navigationLinks.map((link) => (
         <Link
           key={link.label}

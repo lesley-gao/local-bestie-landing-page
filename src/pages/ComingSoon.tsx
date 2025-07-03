@@ -43,7 +43,7 @@ export default function ComingSoon() {
 
         {/* top half */}
         <div className="flex-1 bg-white flex flex-col items-left pt-10 px-20">
-          <Link href="/">
+          <Link href="/customer">
             <Image
               src="/images/lb-logo.png"
               alt="Local Bestie Logo"
@@ -84,7 +84,7 @@ export default function ComingSoon() {
           </div>
 
           <Link
-            href="/"
+            href="/customer"
             className="mb-20 mt-5 font-bold bg-white text-themecolor px-5 py-4 rounded-lg hover:bg-gray-100 clickeffect transition cursor-pointer"
           >
             Back to Homepage
