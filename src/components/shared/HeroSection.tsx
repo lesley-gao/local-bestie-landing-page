@@ -1,5 +1,5 @@
 "use client";
-import { AiOutlinePlayCircle } from "react-icons/ai";
+//import { AiOutlinePlayCircle } from "react-icons/ai";
 import Image from "next/image";
 
 export type HeroContent = {
@@ -35,6 +35,8 @@ const handleJoinClick = (e: React.MouseEvent) => {
   }
 };
 
+// TODO: Add play button for the video, just uncomment the code
+
 export default function HeroSection({ content }: HeroSectionProps) {
   return (
     <section className="bg-themecolor text-white mt-20 py-16 sm:py-24 px-4 sm:px-8 lg:px-24 ">
@@ -53,13 +55,13 @@ export default function HeroSection({ content }: HeroSectionProps) {
             >
               {content.primaryButton.text}
             </a>
-            <a
+            {/* <a
               href={content.secondaryButton.href}
               className="inline-flex items-center justify-center gap-3 text-white/90 px-6 sm:px-8 py-3 rounded-md border border-transparent hover:text-white hover:border-white clickeffect transition"
             >
               <AiOutlinePlayCircle className="text-2xl" />
               {content.secondaryButton.text}
-            </a>
+            </a> */}
           </div>
         </div>
 

@@ -8,6 +8,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   // TODO: All the links below are made up and should be replaced with actual links
+  // TODO: Add the social links for the footer
   const socialLinks = [
     // {
     //   platform: "Facebook",
@@ -31,10 +32,11 @@ export default function Footer() {
     },
   ];
 
+  // TODO: Check whether we need the about link or not
   const navigationLinks = [
-    { label: "About", href: "#" },
-    { label: "Terms", href: "#" },
-    { label: "Privacy", href: "/privacypolicy" },
+    // { label: "About", href: "#" },
+    { label: "Terms & Conditions", href: "/termsandconditions" },
+    { label: "Privacy Policy", href: "/privacypolicy" },
     // { label: "Contact Us", href: "#" },
   ];
 
