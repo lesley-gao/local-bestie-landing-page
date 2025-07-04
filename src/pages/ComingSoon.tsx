@@ -1,24 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+//import { FaFacebookF, FaInstagram  } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { HiOutlineMail } from "react-icons/hi";
 
 export default function ComingSoon() {
   // TODO: All the links below are made up and should be replaced with actual links
   const socialLinks = [
-    {
-      platform: "Facebook",
-      url: "#",
-      icon: <FaFacebookF />,
-    },
-    {
-      platform: "Instagram",
-      url: "#",
-      icon: <FaInstagram />,
-    },
+    // {
+    //   platform: "Facebook",
+    //   url: "#",
+    //   icon: <FaFacebookF />,
+    // },
+    // {
+    //   platform: "Instagram",
+    //   url: "#",
+    //   icon: <FaInstagram />,
+    // },
     {
       platform: "LinkedIn",
       url: "https://www.linkedin.com/company/local-bestie/",
       icon: <FaLinkedinIn />,
+    },
+    {
+      platform: "Email",
+      url: "mailto:info@localbestie.com",
+      icon: <HiOutlineMail />,
     },
   ];
 
