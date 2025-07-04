@@ -55,7 +55,7 @@ export default function HeroSection({ content }: HeroSectionProps) {
             </a>
             <a
               href={content.secondaryButton.href}
-              className="inline-flex items-center justify-center gap-3 text-white/90 px-6 sm:px-8 py-3 rounded-md hover:text-white hover:border clickeffect transition"
+              className="inline-flex items-center justify-center gap-3 text-white/90 px-6 sm:px-8 py-3 rounded-md border border-transparent hover:text-white hover:border-white clickeffect transition"
             >
               <AiOutlinePlayCircle className="text-2xl" />
               {content.secondaryButton.text}

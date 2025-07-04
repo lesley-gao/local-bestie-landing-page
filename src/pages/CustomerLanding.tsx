@@ -1,7 +1,7 @@
 import Navbar from "@/components/shared/Navbar";
 import HeroSection from "@/components/shared/HeroSection";
 import FeaturesSection from "@/components/shared/FeaturesSection";
-import MerchantsSection from "@/components/customerLanding/MerchantsSection";
+//import MerchantsSection from "@/components/customerLanding/MerchantsSection";
 import HowItWorksSection from "@/components/shared/HowItWorksSection";
 import DownloadSection from "@/components/shared/DownloadSection";
 import FAQSection from "@/components/shared/FAQSection";
@@ -21,7 +21,7 @@ export default function CustomerLanding() {
     <>
       <Navbar config={customerNavbarConfig} />
       <HeroSection content={customerHeroContent} />
-      <MerchantsSection />
+      {/* <MerchantsSection /> */}
       <FeaturesSection
         title="Why you'll love it"
         features={customerFeatures}
