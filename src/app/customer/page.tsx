@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "mobile-web-app-capable": "yes",
   },
   icons: {
-    icon: "/lb-icon.png",
+    icon: "/images/lb-icon.png",
   },
 };
 

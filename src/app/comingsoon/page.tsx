@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     images: ["/images/comingsoon.png"],
   },
   icons: {
-    icon: "/lb-icon.png",
+    icon: "/images/lb-icon.png",
   },
 };
 

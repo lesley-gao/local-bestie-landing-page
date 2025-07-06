@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/lb-icon.png",
+    icon: "/images/lb-icon.png",
   },
 };
 
